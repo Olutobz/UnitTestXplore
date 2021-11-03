@@ -78,10 +78,9 @@ class ContactsManagerTest {
 
     @Test
     @DisplayName("Should Create Contact Only on MAC OS")
-    @EnabledOnOs(value = OS.MAC, disabledReason = "Enabled only on MAC OS")
-    public void shouldCreateContactOnlyOnMac() {
+    @EnabledOnOs(value = OS.LINUX, disabledReason = "Enabled only on Linux OS")
+    public void shouldCreateContactOnlyOnLinux() {
         contactsManager.addContact("Olutoba", "Onikoyi", "0123456789");
-
         assertFalse(contactsManager.getAllContacts().isEmpty());
         assertEquals(1, contactsManager.contactList.size());
         assertTrue(contactsManager.getAllContacts().stream()
