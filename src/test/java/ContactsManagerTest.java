@@ -30,6 +30,7 @@ class ContactsManagerTest {
     }
 
     @Test
+    @DisplayName("should Create Contact")
     public void shouldCreateContact() {
         contactsManager.addContact("Olutoba", "Onikoyi", "0123456789");
         assertFalse(contactsManager.getAllContacts().isEmpty());
